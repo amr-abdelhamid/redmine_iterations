@@ -1,0 +1,409 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sort",
+				"sort_clause"
+			],
+			[
+				"la",
+				"last"
+			],
+			[
+				"t",
+				"tbody	Tag"
+			],
+			[
+				"issues",
+				"issues"
+			],
+			[
+				"versions",
+				"versions"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "init.rb",
+			"settings":
+			{
+				"buffer_size": 606,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 54.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/amr/redmine-3.2"
+	],
+	"file_history":
+	[
+		"/Users/amr/Documents/AgileAcademy/Courses and sessions/Sustainable Legacy Code Refactoring/Workshop notes.txt",
+		"/Users/amr/Documents/AgileAcademy/Courses and sessions/Refactoring legacy code/notes about the workshop.txt",
+		"/Users/amr/redmine-3.2/lib/plugins/acts_as_list/test/list_test.rb",
+		"/Users/amr/redmine-3.2/app/helpers/sort_helper.rb",
+		"/Users/amr/redmine-3.2/app/views/users/index.html.erb",
+		"/Users/amr/redmine-3.2/app/views/issues/_form.html.erb",
+		"/Users/amr/redmine-3.2/app/models/issue.rb",
+		"/Users/amr/redmine-3.2/app/controllers/users_controller.rb",
+		"/Users/amr/redmine-3.2/app/views/issues/_list.html.erb",
+		"/Users/amr/redmine-3.2/app/models/document_custom_field.rb",
+		"/Users/amr/redmine-3.2/app/controllers/issues_controller.rb",
+		"/Users/amr/redmine-3.2/app/views/users/_groups.html.erb",
+		"/Users/amr/redmine-3.2/app/controllers/timelog_controller.rb",
+		"/Users/amr/redmine-3.2/app/controllers/admin_controller.rb",
+		"/Users/amr/redmine-3.2/app/controllers/boards_controller.rb",
+		"/Users/amr/redmine-3.2/app/controllers/files_controller.rb",
+		"/Users/amr/redmine-3.2/app/views/repositories/_dir_list.html.erb",
+		"/Users/amr/redmine-3.2/plugins/projects_status/init.rb",
+		"/Users/amr/redmine-3.2/app/views/roles/index.html.erb",
+		"/Users/amr/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/amr/redmine-3.2/app/views/issues/index.html.erb",
+		"/Users/amr/redmine-3.2/plugins/projects_status/app/views/projects_status/index.html.erb",
+		"/Users/amr/redmine-3.2/app/views/versions/_form.html.erb",
+		"/Users/amr/redmine-3.2/app/views/versions/_overview.html.erb",
+		"/Users/amr/redmine-3.2/app/views/versions/new.html.erb",
+		"/Users/amr/redmine-3.2/plugins/redcase/lib/redcase_override.rb",
+		"/Users/amr/redmine-3.2/app/views/versions/index.api.rsb",
+		"/Users/amr/redmine-3.2/lib/redmine/safe_attributes.rb",
+		"/Users/amr/redmine-3.2/app/views/versions/show.api.rsb",
+		"/Users/amr/redmine-3.2/lib/plugins/acts_as_versioned/lib/acts_as_versioned.rb",
+		"/Users/amr/redmine-3.2/app/views/versions/edit.html.erb",
+		"/Users/amr/redmine-3.2/app/models/version_custom_field.rb",
+		"/Users/amr/redmine-3.2/plugins/projects_status/config/routes.rb",
+		"/Users/amr/redmine-3.2/app/views/versions/show.html.erb",
+		"/Users/amr/redmine-3.2/plugins/polls/app/models/poll.rb",
+		"/Users/amr/redmine-3.2/plugins/polls/app/controllers/polls_controller.rb",
+		"/Users/amr/redmine-3.2/app/controllers/versions_controller.rb",
+		"/Users/amr/Documents/AgileAcademy/Email Signature/template-send.html",
+		"/Users/amr/redmine-3.2/config/routes.rb",
+		"/Users/amr/redmine-3.2/plugins/issue_description_template/init.rb",
+		"/Users/amr/redmine-3.2/app/views/versions/index.html.erb",
+		"/Users/amr/redmine-3.2/app/views/versions/new.js.erb",
+		"/Users/amr/redmine-3.2/app/views/versions/status_by.js.erb",
+		"/Users/amr/redmine-3.2/app/views/versions/_issue_counts.html.erb",
+		"/Users/amr/redmine-3.2/app/views/versions/create.js.erb",
+		"/Users/amr/redmine-3.2/desc.patch",
+		"/Users/amr/redmine-3.2/tracker_templates_redmine_1.2-stable.diff",
+		"/Users/amr/redmine-start.sh",
+		"/Users/amr/Courses I have attended/proverbs.txt",
+		"/Users/amr/Documents/AgileAcademy/trips/USA - August 2016/booking summary",
+		"/Users/amr/redmine-3.2/lib/tasks/migrate_jira.rake",
+		"/Users/amr/Documents/AgileAcademy/Courses and sessions/Detecting and Preventing Code Clones Mercilessly/Sample code clones",
+		"/Users/amr/redmine-3.2/entities.xml",
+		"/Users/amr/redmine-3.2/app/views/timelog/report.html.erb",
+		"/Users/amr/redmine-3.2/app/views/timelog/new.html.erb",
+		"/Users/amr/redmine-3.2/app/views/timelog/_form.html.erb",
+		"/Users/amr/redmine-3.2/map_jira_to_redmine.yml",
+		"/Users/amr/migrate_jira.rake",
+		"/Users/amr/Downloads/JIRA-backup-20160605/entities.xml",
+		"/Users/amr/Downloads/ThisTime20.20080330/readme.txt",
+		"/Users/amr/Documents/Temp/new  7.txt",
+		"/Users/amr/Documents/Temp/eclipse-configuration.txt",
+		"/Users/amr/Documents/AgileAcademy/Requests for ICP.txt",
+		"/Users/amr/Documents/clones-gapped.xml",
+		"/Users/amr/Documents/AgileAcademy/My Presentation Defects.txt",
+		"/Users/amr/Documents/AgileAcademy/checklist for email campains.txt",
+		"/Users/amr/Documents/jira2redmine/README.md",
+		"/Users/amr/Documents/jira2redmine/migrate_jira.rake"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/amr/redmine-3.2/app/controllers",
+			"/Users/amr/redmine-3.2/app/",
+			"/Users/amr/redmine-3.2/",
+			"/Users/amr/redmine-3.2/app/",
+			"",
+			"/Users/amr/redmine-3.2/",
+			"/Users/amr/redmine-3.2/app/",
+			"/Users/amr/redmine-3.2/app/views/users",
+			"/Users/amr/redmine-3.2/app/",
+			"/Users/amr/redmine-3.2/app/views",
+			"/Users/amr/redmine-3.2/",
+			"/Users/amr/redmine-3.2/app/views/",
+			"/Users/amr/redmine-3.2/app/views/issues",
+			"/Users/amr/redmine-3.2/app/views",
+			"/Users/amr/redmine-3.2/plugins/redcase",
+			"/Users/amr/redmine-3.2/app",
+			"/Users/amr/redmine-3.2/app/models",
+			"/Users/amr/redmine-3.2/app/views/versions",
+			"/Users/amr/redmine-3.2",
+			"/Users/amr/redmine-3.2/app/views/versions"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"@query",
+			"table",
+			"@spent_hours",
+			"spent",
+			"sort_css_classes",
+			"sort-by-spent-hours",
+			"</th>",
+			"<\\th>",
+			"<th>",
+			"sort_clause",
+			"sort_link",
+			"sort_clause",
+			"sort",
+			"sort_clause",
+			"SortHelper",
+			"sort_header_tag",
+			"sort",
+			"#",
+			"sort_init",
+			"def list",
+			"Sort by",
+			"sort=",
+			"<thread",
+			"sort=",
+			"Sort by",
+			"<table",
+			"sort",
+			"<td ",
+			"<td class=",
+			"issue",
+			"cycle(",
+			"cycle('even', 'odd')",
+			"members",
+			"<table",
+			".css",
+			"css",
+			"Style Sheet",
+			"<table",
+			"class",
+			"<table",
+			"<tr",
+			"link_to_version",
+			"link_to_project",
+			"Total test cases:",
+			" \n",
+			"effective_date",
+			"start_date",
+			"effective_date",
+			"due_date",
+			"effective",
+			"effective_date",
+			"status",
+			"description",
+			"STATUS_ACTIVE",
+			"active",
+			"versions.last",
+			"project.version.last",
+			"project.versions",
+			"hours",
+			"each",
+			"for",
+			"custom_fields",
+			"field",
+			"custom",
+			"version",
+			"_form.rhtml",
+			"_attributes.rhtml",
+			"pass",
+			"jira_key",
+			"jira_marker",
+			"jira_id",
+			"jira_marker",
+			"jira_id",
+			"description",
+			"red_",
+			"description",
+			"jira_id",
+			"<summary>",
+			"[m",
+			"",
+			"&lt",
+			"",
+			"migrate_projects",
+			"\\n",
+			"\\r",
+			"<Summary>",
+			"java"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			") %>",
+			"<%= sort_header_tag('projects.name', :caption => \"",
+			"_form.html.erb",
+			"_attributes.html.erb",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "init.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 606,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								606,
+								606
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 106.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 112.0
+	},
+	"pinned_build_system": "",
+	"project": "redmine-iterations.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 284.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 816.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 250.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

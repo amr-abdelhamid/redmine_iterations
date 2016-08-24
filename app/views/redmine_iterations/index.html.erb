@@ -1,0 +1,55 @@
+<br>
+<h2>Iterations Status</h2>
+<br>
+<div class="autoscroll">
+<table class="list <%= sort_css_classes %>">
+	<thead>
+	<tr>
+		<%= sort_header_tag('projects.name', :caption => "Project") %>
+		<%= sort_header_tag('versions.name', :caption => "Iteration") %>
+		<%= sort_header_tag('versions.start_date', :caption => "Start Date") %>
+		<%= sort_header_tag('versions.effective_date', :caption => "Due Date") %>
+		<!--<%= sort_header_tag('COALESCE((SELECT SUM(estimated_hours) FROM issues WHERE issues.fixed_version_id = ' +
+			' versions.id), 0)', :caption => "Planned Hours") %>
+		<%= sort_header_tag('COALESCE(SELECT SUM(hours) FROM time_entries,  issues ' + 
+			' WHERE time_entries.issue_id = issues.id = and issues.fixed_version_id = versions.id), 0)', :caption => "Burned Hours") %>
+		<%= sort_header_tag('versions.estimated_hours-versions.spent_hours', :caption => "Difference") %> -->
+		<th>Planned Hours</th>
+		<th>Burned Hours</th>
+		<th>Difference</th>
+		<th>Team Members</th>
+	</tr>	
+	</thead>
+	<% @projects.each do |project| %>
+	<tr class="<%= cycle('even', 'odd') -%>">
+		<td class="name">
+			<%= link_to_project(project) %>
+		</td>
+		<td class="name">
+			<%=link_to_version(project.versions.last) %>
+		</td>
+
+		<td class="date" style="white-space:nowrap;">
+			<%=project.versions.last ? format_date(project.versions.last.start_date) : nil %>
+		</td>
+		<td class="date" style="white-space:nowrap;">
+			<%=project.versions.last ? format_date(project.versions.last.due_date) : nil %>
+		</td>
+		<td>
+			<%=project.versions.last ? project.versions.last.estimated_hours : nil %>
+		</td>
+		<td>
+			<%=project.versions.last ? project.versions.last.spent_hours : nil %>
+		</td>
+		<td>
+			<%=project.versions.last ? project.versions.last.estimated_hours - project.versions.last.spent_hours : nil %>
+		</td>
+		<td class="name" style="width:25%">
+			<%=project.users.to_sentence%>
+		</td>
+
+	</tr>
+	<% end %>
+
+</table>		
+</div>
