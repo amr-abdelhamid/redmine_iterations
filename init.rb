@@ -8,5 +8,13 @@ Redmine::Plugin.register :redmine_iterations do
   url 'http://example.com/path/to/plugin'
   author_url 'http://example.com/about'
 
+  project_module :Iterations do
+  	permission :view_iterations_status, :redmine_iterations => :index
+  end
+
   menu :top_menu, :redmine_iterations, { :controller => 'redmine_iterations', :action => 'index' }, :caption => 'Iterations Status'
+
+  Rails.configuration.to_prepare do
+  	Version.send(:include, VersionStartDatePatch)
+  end
 end

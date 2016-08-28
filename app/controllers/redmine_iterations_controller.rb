@@ -5,6 +5,8 @@ class RedmineIterationsController < ApplicationController
   helper :queries
   include QueriesHelper
 
+  before_filter :authorize_global
+
   def index
   	sort_init 'version.start_date', 'desc'
   	sort_update %w(projects.name versions.name versions.start_date versions.effective_date)
