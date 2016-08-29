@@ -16,13 +16,23 @@ class RedmineIterationsControllerTest < ActionController::TestCase
 		assert_template 'index'
 	end
 
-	def test_index_without_permission_should_fail
-		user = @request.session[:user_id] = 2
-		user.Role.remove_permission! :view_iterations_status
+	def test_index_with_user_with_non_member_spermission_should_succeed
+		Role.anonymous.remove_permission! :view_iterations_status
+		Role.non_member.add_permission! :view_iterations_status
+		@request.session[:user_id] = 2 # normal user - non-member
 
 		get :index
 		assert_response :success
 		assert_template 'index'
+	end
+
+	def test_index_user_without_permission_should_fail
+		Role.anonymous.remove_permission! :view_iterations_status
+		Role.non_member.remove_permission! :view_iterations_status
+		@request.session[:user_id] = 2 # normal user - non-member
+
+		get :index
+		assert_response 403
 	end
 
 	def test_index_with_anonymous_with_permission
