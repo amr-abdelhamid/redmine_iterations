@@ -23,7 +23,7 @@
 	<% @projects.each do |project|
 	   @project = project
 		 version = project.versions.first
-		 if (version != nil and version.name.downcase.start_with?('iter') or version.name.downcase.start_with?('sprint')) then version=version else version=nil end 
+		 if (version != nil && (version.name.downcase.start_with?('iter') || version.name.downcase.start_with?('sprint'))) then version=version else version=nil end 
 		 %>
 	<tr class="<%= cycle('even', 'odd') -%>">
 		<td class="name"><%= link_to_project(project) %></td>
