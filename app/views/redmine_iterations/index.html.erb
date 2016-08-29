@@ -22,10 +22,12 @@
 	</thead>
 	<% @projects.each do |project|
 	   @project = project
-		 version = project.versions.first%>
+		 version = project.versions.first
+		 if (version.name.start_with?('Iter') or version.name.start_with?('Sprint')) then version=version else version=nil end 
+		 %>
 	<tr class="<%= cycle('even', 'odd') -%>">
 		<td class="name"><%= link_to_project(project) %></td>
-		<td class="name"><%=link_to_version version%></td>
+		<td class="name"><%= version ? link_to_version(version) : 'none'%></td>
 		<td class="date" style="white-space:nowrap;"><%=version ? format_date(version.start_date) : nil %></td>
 		<td class="date" style="white-space:nowrap;"><%=version ? format_date(version.due_date) : nil %></td>
 		<td><%=version ? version.estimated_hours : nil %></td>
