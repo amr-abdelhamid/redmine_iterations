@@ -16,5 +16,13 @@ class RedmineIterationsController < ApplicationController
         "and (UCASE(versions.name) like 'ITER%' or UCASE(versions.name) like 'SPRINT%'))")
   		.where("projects.status =  #{Project::STATUS_ACTIVE}")
 		  .order(sort_clause)
+
+    # #remove unimportant projects
+    # @projects.delete_if {|project| project.custom_fields.contain < 3}
+    # @projects.each do |project|
+    #   if project.custom_fields.include("type")
+    #
+    #   end
+    # end
   end
 end

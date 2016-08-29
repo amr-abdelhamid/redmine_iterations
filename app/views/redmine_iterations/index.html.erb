@@ -20,34 +20,18 @@
 		<th>Team Members</th>
 	</tr>
 	</thead>
-	<% @projects.each do |project| %>
+	<% @projects.each do |project|
+	   @project = project
+		 version = project.versions.first%>
 	<tr class="<%= cycle('even', 'odd') -%>">
-		<td class="name">
-			<%= link_to_project(project) %>
-		</td>
-		<td class="name">
-			<%=link_to_version(project.versions.first)%>
-		</td>
-
-		<td class="date" style="white-space:nowrap;">
-			<%=project.versions.first ? format_date(project.versions.first.start_date) : nil %>
-		</td>
-		<td class="date" style="white-space:nowrap;">
-			<%=project.versions.first ? format_date(project.versions.first.due_date) : nil %>
-		</td>
-		<td>
-			<%=project.versions.first ? project.versions.first.estimated_hours : nil %>
-		</td>
-		<td>
-			<%=project.versions.first ? project.versions.first.spent_hours : nil %>
-		</td>
-		<td>
-			<%=project.versions.first ? project.versions.first.estimated_hours - project.versions.first.spent_hours : nil %>
-		</td>
-		<td class="name" style="width:25%">
-			<%=project.users.to_sentence%>
-		</td>
-
+		<td class="name"><%= link_to_project(project) %></td>
+		<td class="name"><%=link_to_version version>%></td>
+		<td class="date" style="white-space:nowrap;"><%=version ? format_date(version.start_date) : nil %></td>
+		<td class="date" style="white-space:nowrap;"><%=version ? format_date(version.due_date) : nil %></td>
+		<td><%=version ? version.estimated_hours : nil %></td>
+		<td><%=version ? version.spent_hours : nil %></td>
+		<td><%=version ? version.estimated_hours - version.spent_hours : nil %></td>
+		<td class="name" style="width:25%"><%=project.users.to_sentence%></td>
 	</tr>
 	<% end %>
 
