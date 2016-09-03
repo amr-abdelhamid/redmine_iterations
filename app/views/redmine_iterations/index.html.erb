@@ -9,30 +9,23 @@
 		<%= sort_header_tag('versions.name', :caption => "Iteration") %>
 		<%= sort_header_tag('versions.start_date', :caption => "Start Date") %>
 		<%= sort_header_tag('versions.effective_date', :caption => "Due Date") %>
-		<!--<%= sort_header_tag('COALESCE((SELECT SUM(estimated_hours) FROM issues WHERE issues.fixed_version_id = ' +
-			' versions.id), 0)', :caption => "Planned Hours") %>
-		<%= sort_header_tag('COALESCE(SELECT SUM(hours) FROM time_entries,  issues ' +
-			' WHERE time_entries.issue_id = issues.id = and issues.fixed_version_id = versions.id), 0)', :caption => "Burned Hours") %>
-		<%= sort_header_tag('versions.estimated_hours-versions.spent_hours', :caption => "Difference") %> -->
 		<th>Planned Hours</th>
 		<th>Burned Hours</th>
 		<th>Difference</th>
 		<th>Team Members</th>
 	</tr>
 	</thead>
-	<% @projects.each do |project|
-	   @project = project
-		 version = project.versions.first
-		 if (version != nil && (version.name.downcase.start_with?('iter') || version.name.downcase.start_with?('sprint'))) then version=version else version=nil end 
-		 %>
+	<% @projects_and_last_iteration.each do |project, last_iteration|
+			@project = project%>
+
 	<tr class="<%= cycle('even', 'odd') -%>">
 		<td class="name"><%= link_to_project(project) %></td>
-		<td class="name"><%= version ? link_to_version(version) : 'none'%></td>
-		<td class="date" style="white-space:nowrap;"><%=version ? format_date(version.start_date) : nil %></td>
-		<td class="date" style="white-space:nowrap;"><%=version ? format_date(version.due_date) : nil %></td>
-		<td><%=version ? version.estimated_hours : nil %></td>
-		<td><%=version ? version.spent_hours : nil %></td>
-		<td><%=version ? version.estimated_hours - version.spent_hours : nil %></td>
+		<td class="name"><%= last_iteration ? link_to_version(last_iteration) : 'none'%></td>
+		<td class="date" style="white-space:nowrap;"><%=last_iteration ? format_date(last_iteration.start_date) : nil %></td>
+		<td class="date" style="white-space:nowrap;"><%=last_iteration ? format_date(last_iteration.due_date) : nil %></td>
+		<td><%=last_iteration ? last_iteration.estimated_hours : nil %></td>
+		<td><%=last_iteration ? last_iteration.spent_hours : nil %></td>
+		<td><%=last_iteration ? (last_iteration.estimated_hours - last_iteration.spent_hours).round(1) : nil %></td>
 		<td class="name" style="width:25%"><%=project.users.to_sentence%></td>
 	</tr>
 	<% end %>
