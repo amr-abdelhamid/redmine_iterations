@@ -28,8 +28,9 @@ class RedmineIterationsController < ApplicationController
   def get_last_iteration_for_project(project)
     last_iteration = nil
     project.versions.each do |v|
-      if(v.name.downcase.include?('iteration') || v.name.downcase.include?('sprint'))
-        if(last_iteration == nil || v.start_date > last_iteration.start_date)
+      if(v != nil && (v.name.downcase.include?('iteration') || v.name.downcase.include?('sprint')))
+        if(last_iteration == nil ||
+          (v.start_date != nil && last_iteration.start_date != nil && (v.start_date > last_iteration.start_date)))
           last_iteration = v
         end
       end
