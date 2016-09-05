@@ -23,8 +23,8 @@
 		<td class="name"><%= last_iteration ? link_to_version(last_iteration) : 'none'%></td>
 		<td class="date" style="white-space:nowrap;"><%=last_iteration ? format_date(last_iteration.start_date) : nil %></td>
 		<td class="date" style="white-space:nowrap;"><%=last_iteration ? format_date(last_iteration.due_date) : nil %></td>
-		<td><%=last_iteration ? last_iteration.estimated_hours : nil %></td>
-		<td><%=last_iteration ? last_iteration.spent_hours : nil %></td>
+		<td><%=last_iteration ? last_iteration.estimated_hours.round(1) : nil %></td>
+		<td><%=last_iteration ? last_iteration.spent_hours.round(1) : nil %></td>
 		<td><%=last_iteration ? (last_iteration.estimated_hours - last_iteration.spent_hours).round(1) : nil %></td>
 		<td class="name" style="width:25%"><%=project.users.to_sentence%></td>
 	</tr>
